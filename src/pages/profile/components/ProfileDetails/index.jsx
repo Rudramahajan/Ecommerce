@@ -10,7 +10,7 @@ import {
 } from 'react-redux';
 
 import { useState } from "react";
-import { editProfile } from 'redux/profile/ProfileSlice';
+import { editProfile } from 'redux-thunk/redux/profile/ProfileSlice';
 
 import EditIcon from '@mui/icons-material/Edit';
 import DoneIcon from '@mui/icons-material/Done';

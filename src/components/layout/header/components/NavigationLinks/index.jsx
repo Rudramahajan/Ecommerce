@@ -14,6 +14,7 @@ import NavigationLink from "assets/styles/NavigationLink";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import MessageAlert from "components/ui-kit/MessageAlert/index";
+import CartBadge from "./components/CartBadge";
 
 const navlist = (auth) => {
     const nav = routelist.filter((route) => {
@@ -28,7 +29,7 @@ const navlist = (auth) => {
 
 const NavigationLinks = () => {
     const { openOrderDialog, openLogoutAlert, setOpenLogoutAlert, handleOrderDialog,
-        handleLogoutAlert, handleLogout,cartList } = useNavigationController();
+        handleLogout,cartList } = useNavigationController();
         console.log(cartList.length);
     const auth = checkToken();
     const list = navlist(auth);
@@ -37,9 +38,7 @@ const NavigationLinks = () => {
             {list.map((route) => {
                 if (route.label === 'Cart') {
                     route.label = (
-                        <Badge badgeContent={cartList.length} color="secondary">
-                            <ShoppingCartIcon />
-                        </Badge>
+                        <CartBadge />
                     )
                 }
                 return (

@@ -1,10 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { ProductListCall } from "network/services/product.service";
-
-const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await ProductListCall();
-  return response.data;
-});
+import { fetchProducts } from "redux-thunk/thunk/product/product";
 
 const productsSlice = createSlice({
   name: 'products',

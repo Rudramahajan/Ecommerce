@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import ProductsReducer from 'redux/product/productsSlice'
-import CartReducer from 'redux/cart/CartSlice';
-import ProfileReducer from 'redux/profile/ProfileSlice';
-import OrderReducer from 'redux/order/orderSlice';
-import authenticationReducer from 'redux/authentication/authenticationSlice';
+import ProductsReducer from 'redux-thunk/redux/product/productsSlice'
+import CartReducer from 'redux-thunk/redux/cart/CartSlice';
+import ProfileReducer from 'redux-thunk/redux/profile/ProfileSlice';
+import OrderReducer from 'redux-thunk/redux/order/orderSlice';
+import authenticationReducer from 'redux-thunk/redux/authentication/authenticationSlice';
 
 const saveToLocalStorage = (state) => {
     try {

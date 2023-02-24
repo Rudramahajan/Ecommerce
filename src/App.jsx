@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import MyRoutes from "routes/Routes";
-import {store} from './redux/store'
+import {store} from 'redux-thunk/store'
 
 const App = () => {
   useEffect(()=>{

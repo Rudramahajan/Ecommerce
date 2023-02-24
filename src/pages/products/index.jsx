@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { fetchProducts } from "redux/product/productsSlice";
+import { fetchProducts } from "redux-thunk/redux/product/productsSlice";
 import { useSelector, useDispatch } from 'react-redux';
 import { Grid } from '@mui/material';
 import { MoonLoader } from 'react-spinners'

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { deleteProduct, buyProducts } from 'redux/cart/CartSlice';
-import { addOrder } from "redux/order/orderSlice";
+import { deleteProduct, buyProducts } from 'redux-thunk/redux/cart/CartSlice';
+import { addOrder } from "redux-thunk/redux/order/orderSlice";
 
 
 const useCartController = () => {

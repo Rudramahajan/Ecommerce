@@ -5,7 +5,7 @@ import {
 
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addProduct } from 'redux/cart/CartSlice';
+import { addProduct } from 'redux-thunk/redux/cart/CartSlice';
 import { useNavigate } from 'react-router-dom';
 
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';

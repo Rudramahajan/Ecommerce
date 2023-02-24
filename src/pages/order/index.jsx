@@ -12,7 +12,7 @@ import {
   Box
 } from '@mui/material'
 
-import { deleteOrder } from "redux/order/orderSlice";
+import { deleteOrder } from "redux-thunk/redux/order/orderSlice";
 
 import OrderDetails from "pages/order/components/OrderDetails/index";
 import Button from 'components/ui-kit/Button/index'
