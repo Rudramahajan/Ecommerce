@@ -3,19 +3,24 @@ import { createSlice } from '@reduxjs/toolkit';
 export const ProfileSlice = createSlice({
     name: 'profile',
     initialState: {
-        First_Name: 'Rudra',
-        Last_Name: 'Mahajan',
-        User_Name: 'rm_2001',
-        Email: 'rudra@gmail.com',
-        Phone: '7723813756',
-        Address: '534,Alok Nagar,Indore'
+        First_Name: '',
+        Last_Name: '',
+        User_Name: '',
+        Email: '',
+        Phone: '',
+        Address: '',
+        firebaseToken: null
     },
     reducers: {
-        editProfile: (state, action) => {
-            state[action.payload.my_key] = action.payload.Field;
+        addFirebaseToken: (state,action) => {
+            state.firebaseToken = action.payload.token;
+        },
+        setProfile: (state, action) => {
+            state = action.payload.value;
+            return state;
         }
     }
 });
 
-export const { editProfile } = ProfileSlice.actions;
+export const { addFirebaseToken,setProfile } = ProfileSlice.actions;
 export default ProfileSlice.reducer;

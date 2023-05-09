@@ -2,6 +2,7 @@ import Login from "pages/login/index";
 import ProductsList from "pages/products/index";
 import Profile from "pages/profile/index";
 import Cart from "pages/cart/index";
+import SignUp from "pages/signup";
 
 const routelist = [
     {
@@ -31,6 +32,13 @@ const routelist = [
         path: '/cart',
         component: <Cart />,
         hasAuth: true
+    },
+    {
+        id: 5,
+        label: 'SignUp',
+        path: '/signup',
+        component: <SignUp />,
+        hasAuth: false
     }
 ];
 

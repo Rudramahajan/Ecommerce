@@ -5,9 +5,8 @@ export const orderSlice = createSlice({
     initialState: [],
     reducers: {
         addOrder: (state, action) => {
-            const cart = action.payload.value;
-            const obj = { id: new Date().getTime(), value: cart }
-            state.push(obj);
+            state = action.payload.value;
+            return state;
         },
         deleteOrder: (state) => {
             return state.filter((order) => order.key !== order.key);

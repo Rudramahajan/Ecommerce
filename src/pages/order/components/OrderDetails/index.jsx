@@ -14,7 +14,7 @@ const OrderDetails = ({ order }) => {
   return (
       <>
           <Box sx={{ marginTop: '2vh', backgroundColor: 'grey' }}>
-              <Typography>Order Id : {order.id}</Typography>
+              <Typography>Order Id : {order.key}</Typography>
               <TableContainer component={Paper}>
                   <Table sx={{ minWidth: 500 }} aria-label="simple table">
                       <TableHead>
@@ -26,7 +26,7 @@ const OrderDetails = ({ order }) => {
                           </TableRow>
                       </TableHead>
                       <TableBody>
-                          {order.value.map((row) => (
+                          {order.myCart.map((row) => (
                               <TableRow
                                   key={row.name}
                                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -35,8 +35,8 @@ const OrderDetails = ({ order }) => {
                                       {row.title}
                                   </TableCell>
                                   <TableCell align="right">{row.price}</TableCell>
-                                  <TableCell align="right">{row.quantity}</TableCell>
-                                  <TableCell align="right">{row.price * row.quantity}</TableCell>
+                                  <TableCell align="right">{row.count}</TableCell>
+                                  <TableCell align="right">{row.price * row.count}</TableCell>
                               </TableRow>
                           ))}
                       </TableBody>

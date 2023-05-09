@@ -12,13 +12,15 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 import MessageAlert from 'components/ui-kit/MessageAlert/index';
 import CustomButton from 'components/ui-kit/Button';
+import { db } from 'network/firebase/firebaseConfig';
+import { doc, addDoc, where, query, setDoc, deleteDoc,getDoc, updateDoc } from 'firebase/firestore';
 
 
 
-const CartButton = ({ id }) => {
+const CartButton = ({ id,handleDialogue }) => {
     const [productCount, setProductCount] = useState(1);
     const [openAddedToCartAlert, setOpenAddedToCartAlert] = useState(false);
-
+    const token = useSelector((state) => state.profile.firebaseToken);
     const state = useSelector((state) => state.products);
     const cart = useSelector((state) => state.cart);
     console.log('cart: ', cart);
@@ -39,15 +41,23 @@ const CartButton = ({ id }) => {
     }
     console.log('ProductCount: ', productCount);
 
-    const handleAddCart = () => {
-        let product = products[id - 1];
-        dispatch(addProduct({ product, productCount }));
-
-        setProductCount(1);
+    const handleAddCart = async () => {
+        const addproduct = products[id];
+        let tempdart = [];
+        tempdart = await getDoc(doc(db,'users',token));
+        let myCart = tempdart.data().cart;
+        myCart = myCart.filter((p)=>{
+            if(p['id'] !== products[id].id){
+                console.log(id,' ',products[id].id);
+                return p;
+            }
+        })
+        myCart.push({...products[id],count:productCount})
+        await updateDoc(doc(db,'users',token),{
+            cart : myCart
+        });
         setOpenAddedToCartAlert(true);
-        setTimeout(() => {
-            navigate('/cart');
-        }, 1000);
+       setTimeout(handleDialogue, 2000); 
     }
     return (
         <>

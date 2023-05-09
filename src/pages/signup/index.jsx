@@ -13,7 +13,7 @@ import {
 
 
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import useLoginForm from "pages/login/logincontroller/useLoginForm";
+import useSingUpForm from "./signupcontroller/useSingUpForm";
 import MessageAlert from "components/ui-kit/MessageAlert/index";
 import Button from 'components/ui-kit/Button/index'
 
@@ -21,11 +21,12 @@ import { useState } from "react";
 import { Paper } from '@mui/material';
 
 
-const Login = () => {
+const SignUp = () => {
 
+    const [signupSuccess, setSignupSuccess] = useState(false);
     const [openFailedLoginAlert, setOpenFailedLoginAlert] = useState(false);
 
-    const { handleSubmit, values, handleChange, errors, handleBlur, touched } = useLoginForm({ openFailedLoginAlert, setOpenFailedLoginAlert });
+    const { handleSubmit, values, handleChange, errors, handleBlur, touched } = useSingUpForm({ signupSuccess,setSignupSuccess,setOpenFailedLoginAlert });
 
     return (
         <>
@@ -36,7 +37,7 @@ const Login = () => {
                             <LockOutlinedIcon />
                         </Avatar>
                         <CardHeader
-                            title=' Login' />
+                            title=' Sign Up' />
                         <CardContent>
                             <form onSubmit={handleSubmit}>
                                 <LoginField
@@ -61,17 +62,18 @@ const Login = () => {
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     error={errors.password && touched.password ? errors.password : null}
-                                    helperText={errors.password && touched.password ? errors.password : null}
+                                    helperText={errors.password && touched.password ? "Not a valid password" : null}
                                 />
-                                <Button content={'Login'} handleFunction={handleSubmit}/>
+                                <Button content={'Sing Up'} handleFunction={handleSubmit}/>
                             </form>
                         </CardContent>
                     </LoginCard>
                 </LoginBox>
             </Paper>
-            <MessageAlert open={openFailedLoginAlert} setOpen={setOpenFailedLoginAlert} message={'Invalid credentials...'} color={'error'} />
+            <MessageAlert open={signupSuccess} setOpen={setSignupSuccess} message={'Signup successful...'} color={'success'} />
+            <MessageAlert open={openFailedLoginAlert} setOpen={setOpenFailedLoginAlert} message={'user already exist...'} color={'error'} />
         </>
     )
 }
 
-export default Login;
+export default SignUp;

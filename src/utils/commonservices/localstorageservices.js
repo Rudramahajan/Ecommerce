@@ -1,7 +1,7 @@
 import { token, value } from 'utils/constants'
 
-export const setToken = () => {
-  window.localStorage.setItem(token, value);
+export const setToken = (myToken) => {
+  window.localStorage.setItem(token, myToken);
 }
 
 export const checkToken = () => {

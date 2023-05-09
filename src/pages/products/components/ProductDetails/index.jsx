@@ -36,7 +36,7 @@ const ProductDetails = ({ open, handleDialogue, id }) => {
                     <ProductTypography><ProductTitleTypography>Rs</ProductTitleTypography> : {product['price']}</ProductTypography>
                 </ProductDialogContent>
                 <ProductDialogActions>
-                    <CartButton id={id} />
+                    <CartButton id={id} handleDialogue={handleDialogue} />
                 </ProductDialogActions>
 
             </Dialog>
