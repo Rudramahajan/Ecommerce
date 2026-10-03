@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="n_svCwMJN-z8xaFqqADS">
+    <mxGraphModel dx="1006" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="x-8thJ_eOBKoUWWDrhoA-0" />
+        <mxCell id="x-8thJ_eOBKoUWWDrhoA-1" parent="x-8thJ_eOBKoUWWDrhoA-0" />
+        <mxCell id="AbJ37FA1o0RB3voxti96-0" parent="x-8thJ_eOBKoUWWDrhoA-1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="User" vertex="1">
+          <mxGeometry height="80" width="80" x="60" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-1" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;direction=south;" value="Load Balancer" vertex="1">
+          <mxGeometry height="280" width="70" x="360" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-2" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Video Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-3" parent="x-8thJ_eOBKoUWWDrhoA-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="S3" vertex="1">
+          <mxGeometry height="80" width="120" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-4" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-0" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="AbJ37FA1o0RB3voxti96-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="206.01" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-6" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="AbJ37FA1o0RB3voxti96-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280.98" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-22" connectable="0" parent="AbJ37FA1o0RB3voxti96-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="send video upload request&lt;div&gt;and manifest file request&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.15" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-7" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-2" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="AbJ37FA1o0RB3voxti96-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-9" connectable="0" parent="AbJ37FA1o0RB3voxti96-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Get Presigned Url of S3 to send to client&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0818" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-8" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-0" style="endArrow=classic;html=1;rounded=0;exitX=0.375;exitY=-0.025;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="AbJ37FA1o0RB3voxti96-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-10" connectable="0" parent="AbJ37FA1o0RB3voxti96-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Directly upload video in chunks&amp;nbsp;&lt;div&gt;with presigned url to S3&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.089" y="1" as="geometry">
+            <mxPoint x="19" y="-46" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-11" parent="x-8thJ_eOBKoUWWDrhoA-1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;b&gt;Video&lt;/b&gt;&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;Video id (pk)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;thumbnail&lt;/span&gt;&lt;/div&gt;&lt;div&gt;title&lt;/div&gt;&lt;div&gt;s3 full url&lt;/div&gt;&lt;div&gt;s3 manifest file&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="910" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-13" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="550" x="600" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-14" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Video transformed into different resolution&amp;nbsp;&lt;div&gt;240p&lt;/div&gt;&lt;div&gt;720p&lt;/div&gt;&lt;div&gt;1040p&lt;/div&gt;&lt;div&gt;4k&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="120" x="610" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-15" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=1;whiteSpace=wrap;html=1;" value="split into chunks" vertex="1">
+          <mxGeometry height="60" width="120" x="780" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-16" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-3" style="endArrow=classic;html=1;rounded=0;exitX=1.017;exitY=0.594;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="AbJ37FA1o0RB3voxti96-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="380" as="sourcePoint" />
+            <mxPoint x="410" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-17" connectable="0" parent="AbJ37FA1o0RB3voxti96-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="sent event on video upload" vertex="1">
+          <mxGeometry relative="1" x="-0.1906" y="-1" as="geometry">
+            <mxPoint x="22" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-18" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-13" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.958;entryY=0.244;entryDx=0;entryDy=0;entryPerimeter=0;" target="AbJ37FA1o0RB3voxti96-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="380" as="sourcePoint" />
+            <mxPoint x="410" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-19" connectable="0" parent="AbJ37FA1o0RB3voxti96-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="send manifest file and chunks to s3" vertex="1">
+          <mxGeometry relative="1" x="-0.2633" y="-2" as="geometry">
+            <mxPoint x="-9" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-21" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.375;exitDx=0;exitDy=0;entryX=0.017;entryY=0.354;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="AbJ37FA1o0RB3voxti96-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="380" as="sourcePoint" />
+            <mxPoint x="390" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-23" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-14" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="AbJ37FA1o0RB3voxti96-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="360" as="sourcePoint" />
+            <mxPoint x="350" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-24" parent="x-8thJ_eOBKoUWWDrhoA-1" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;verticalAlign=top;" value="&lt;h2&gt;Video Streaming — Quick Interview Notes&lt;/h2&gt;&lt;h3&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1. Codec&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Codec = compresses and decompresses video.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Reduces video size while maintaining quality.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Examples: &lt;strong&gt;H.264, H.265, VP9, AV1&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2. Container&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Container = package that holds video, audio, subtitles and metadata.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Examples: &lt;strong&gt;MP4, MKV, WebM, MOV&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;MP4&lt;br&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;├── H.264 Video&lt;br&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;├── AAC Audio&lt;br&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;└── Metadata&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;3. Bitrate&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bitrate = amount of data used to represent video per second.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Usually measured in &lt;strong&gt;Kbps or Mbps&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Higher bitrate generally means &lt;strong&gt;better quality + larger file size&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1080p → 5 Mbps&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;720p  → 2.5 Mbps&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;480p  → 1 Mbps&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 4. Segments / chunks&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Video is divided into &lt;strong&gt;small pieces&lt;/strong&gt;, usually a few seconds each.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Player downloads them &lt;strong&gt;one by one&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Example:&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;     0–5 sec → Segment 1&lt;br&gt;     5–10 sec → Segment 2&lt;br&gt;     10–15 sec → Segment 3&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;5. Manifest&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;it is a base file used by client to get instruction of each resolutions and segments of that which they download from s3 or cdn.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;HLS → &lt;code&gt;.m3u8&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;master.m3u8&lt;br&gt; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/code&gt;/videos/123/&lt;br&gt;&lt;/pre&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0px;&quot;&gt;&lt;pre&gt;│&lt;/pre&gt;&lt;pre&gt;├── master.m3u8&lt;/pre&gt;&lt;pre&gt;│&lt;/pre&gt;&lt;pre&gt;├── 1080p/&lt;/pre&gt;&lt;pre&gt;│   ├── playlist.m3u8&lt;/pre&gt;&lt;pre&gt;│   ├── segment1.ts&lt;/pre&gt;&lt;pre&gt;│   ├── segment2.ts&lt;/pre&gt;&lt;pre&gt;│   └── segment3.ts&lt;/pre&gt;&lt;pre&gt;│&lt;/pre&gt;&lt;pre&gt;├── 720p/&lt;/pre&gt;&lt;pre&gt;│   ├── playlist.m3u8&lt;/pre&gt;&lt;pre&gt;│   ├── segment1.ts&lt;/pre&gt;&lt;pre&gt;│   ├── segment2.ts&lt;/pre&gt;&lt;pre&gt;│   └── segment3.ts&lt;/pre&gt;&lt;pre&gt;│&lt;/pre&gt;&lt;pre&gt;└── 480p/&lt;/pre&gt;&lt;pre&gt;    ├── playlist.m3u8&lt;/pre&gt;&lt;pre&gt;    ├── segment1.ts&lt;/pre&gt;&lt;pre&gt;    ├── segment2.ts&lt;/pre&gt;&lt;pre&gt;    └── segment3.ts&lt;/pre&gt;&lt;/blockquote&gt;&lt;h3&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;6. Adaptive Bitrate Streaming (ABR)&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;ABR = player automatically changes video quality based on network conditions and buffer.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;We create multiple versions of the same video with different bitrates.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Example:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Good network&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;→ 1080p / 5 Mbps&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Network becomes slow&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;→ 720p / 2.5 Mbps&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Network becomes very slow&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;→ 480p / 1 Mbps&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;When the network improves, the player can move back to a higher quality.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="1750" width="1750" x="30" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-25" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-0" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.667;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="AbJ37FA1o0RB3voxti96-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-26" connectable="0" parent="AbJ37FA1o0RB3voxti96-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&amp;nbsp;fetch manifest files and fetch chunks of&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;resolution for&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;adaptive bitrate transmission&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2229" as="geometry">
+            <mxPoint x="36" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-27" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-13" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="AbJ37FA1o0RB3voxti96-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="350" as="sourcePoint" />
+            <mxPoint x="460" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-28" connectable="0" parent="AbJ37FA1o0RB3voxti96-27" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="share manifest file to be stored in db" vertex="1">
+          <mxGeometry relative="1" x="-0.218" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-29" parent="x-8thJ_eOBKoUWWDrhoA-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="CDN" vertex="1">
+          <mxGeometry height="80" width="80" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-30" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-0" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="AbJ37FA1o0RB3voxti96-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="430" y="220" as="sourcePoint" />
+            <mxPoint x="480" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-31" connectable="0" parent="AbJ37FA1o0RB3voxti96-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="CDN check for&lt;br&gt;manifest file&amp;nbsp;&lt;div&gt;and chunks fetch&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0663" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-32" parent="x-8thJ_eOBKoUWWDrhoA-1" style="rounded=1;whiteSpace=wrap;html=1;" value="Generate manifest&amp;nbsp;&lt;div&gt;file&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="970" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="AbJ37FA1o0RB3voxti96-33" edge="1" parent="x-8thJ_eOBKoUWWDrhoA-1" source="AbJ37FA1o0RB3voxti96-15" style="endArrow=classic;html=1;rounded=0;exitX=1.008;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.383;entryDx=0;entryDy=0;entryPerimeter=0;" target="AbJ37FA1o0RB3voxti96-32" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="310" as="sourcePoint" />
+            <mxPoint x="770" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
